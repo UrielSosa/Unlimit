@@ -8,11 +8,10 @@ window.onload = function (){
   let inputEmail = elementos[3];
   let inputContra = elementos[4];
   let inputConfirm = elementos[5];
-  let botonEnviar = elementos[6];
+  let botonEnviar = elementos[7];
 
   let selectProvincia = document.getElementById('pais')
   let divMunicipio = document.getElementById('muncip');
-
 
   let errorNomb = document.getElementById('errorNom');
   let errorAp = document.getElementById('errorApe');
@@ -152,6 +151,7 @@ window.onload = function (){
       })
       .then(function(data){
         var selectMunicipio = document.createElement('select');
+        selectMunicipio.setAttribute('class', 'form-control');
         selectMunicipio.name = 'municipios';
         selectMunicipio.id = 'municipios';
         divMunicipio.appendChild(selectMunicipio);
@@ -174,5 +174,6 @@ window.onload = function (){
     selecMun.remove();
   })
 
-
+divMunicipio.setAttribute('class', 'form-group');
+console.log(divMunicipio);
 }

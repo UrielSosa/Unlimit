@@ -3,7 +3,6 @@
     <title>Detalle Producto</title>
 @endsection
 @section('contenido')
-
   <<div class="card text-white bg-secondary  mt-3" style="max-width: 18rem;">
     <div class="card-header">Nombre del Producto:</div>
     <p>{{$producto->name}}</p>

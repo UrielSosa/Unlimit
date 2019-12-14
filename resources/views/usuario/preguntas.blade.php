@@ -3,7 +3,7 @@
     <title>Alguna duda {{ Auth::user()->first_name}}</title>
 @endsection
 @section('contenido')
-  <h2 class="text-center text-white">Preguntas Frecuentes</h2>
+  <h2 class="text-center">Preguntas Frecuentes</h2>
   <div class="container-fluid form-inline ">
     <br>
     <div class="dropdown">
@@ -50,4 +50,5 @@
   margin-top: 31vh;
 }
   </style>
+
 @endsection

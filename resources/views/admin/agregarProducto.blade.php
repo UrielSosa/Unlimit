@@ -3,8 +3,8 @@
     <title>Agregar Producto</title>
 @endsection
 @section('contenido')
-
-<div class="list-group row">
+  <center>
+<div class="list-group row mb-3 mt-3 card rounded-top" style="width: 18rem;">
   <h3 class="text-center card-header text-body">Agregar un producto</h3>
 
   <form class="" action="/agregarProducto" method="post" enctype="multipart/form-data">
@@ -35,10 +35,11 @@
       <input type="file" name="featured_img" value="">
     </div>
 
-    <div class="list-group-item col-md-10">
-      <input class="btn btn-success centerbtn" type="submit" name="enviar" value="Agregar">
+    <div class="list-group-item col-md-10 mb-2">
+      <input class="btn btn-success" type="submit" name="enviar" value="Agregar">
     </div>
 
   </form>
 </div>
+
 @endsection

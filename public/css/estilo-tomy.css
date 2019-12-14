@@ -1,83 +1,3 @@
-/* IMAGENES */
-/* #a{
-  background-image: url(../images/inicio/1.jpg);
-  background-size: 100% 100%;
-}
-#b{
-  background-image: url(../images/inicio/2.jpg);
-  background-size: 100% 100%;
-}
-#c{
-  background-image: url(../images/inicio/3.jpg);
-  background-size: 100% 100%;
-}
-#d{
-  background-image: url(../images/inicio/4.jpg);
-  background-size: 100% 100%;
-}
-#e{
-  background-image: url(../images/inicio/5.jpg);
-  background-size: 100% 100%;
-}
-#f{
-  background-image: url(../images/inicio/6.jpg);
-  background-size: 100% 100%;
-}
-#g{
-  background-image: url(../images/inicio/7.jpg);
-  background-size: 100% 100%;
-}
-#h{
-  background-image: url(../images/inicio/8.jpg);
-  background-size: 100% 100%;
-}
-#i{
-  background-image: url(../images/inicio/9.jpg);
-  background-size: 100% 100%;
-}
-#j{
-  background-image: url(../images/inicio/10.jpg);
-  background-size: 100% 100%;
-}
-#k{
-  background-image: url(../images/inicio/11.jpg);
-  background-size: contain;
-}
-
-#l{
-  background-image: url(../images/inicio/12.jpg);
-  background-size: 100% 100%;
-}
-#m{
-  background-image: url(../images/inicio/13.jpg);
-  background-size: 100% 100%;
-}
-#n{
-  background-image: url(../images/inicio/14.jpg);
-  background-size: 100% 100%;
-}
-#o{
-  background-image: url(../images/inicio/15.jpg);
-  background-size: 100% 100%;
-}
-
-#p{
-  background-image: url(../images/inicio/16.jpg);
-  background-size: 100% 100%;
-}
-#q{
-  background-image: url(../images/inicio/17.jpg);
-  background-size: 100% 100%;
-}
-#r{
-  background-image: url(../images/inicio/18.png);
-  background-size: 100% 100%;
-}
-#s{
-  background-image: url(../images/inicio/19.jpg);
-  background-size: 100% 100%;
-} */
-
 #a{
   background-image: url(../images/inicio/fondo1.jpg);
   background-size: 100% 100%;
@@ -106,9 +26,6 @@
   background-image: url(../images/inicio/fondo7.jpg);
   background-size: 100% 100%;
 }
-
-
-/* FIN */
 #z{
   background-image: url(../images/register/register1.jpg);
   background-size: 100% 100%;
@@ -127,9 +44,12 @@
 }
 
 
+.cajadefondo{
+  background: linear-gradient(to left, #abbaab, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
 .cajadelogin{
   /* background-color: rgb(110, 193, 201); */
-  height: 88vh;
+  height: 86vh;
   background-color: rgba(0, 0, 0, 0.30);
 }

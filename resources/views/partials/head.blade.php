@@ -18,4 +18,5 @@
     {{-- @yield('estilo') --}}
     @yield('titulo')
   </head>
-  <body id="bodybg">
+  <body>
+    <div class="cajadefondo" id="bodybg">

@@ -3,8 +3,7 @@
     <title>Perfil de {{ Auth::user()->first_name}} {{ Auth::user()->last_name}}</title>
 @endsection
 @section('contenido')
-
-  <div class="container mt-4 register">
+    <div class="container mt-4 register">
       <div class="row">
     		{{-- <div class="col-sm-10"><center><h1>{{ Auth::user()->name }}</h1></div> --}}
       </div>
@@ -13,7 +12,7 @@
 
 
         <div class="text-center">
-          <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+          <img src="" class="avatar img-circle img-thumbnail" alt="avatar">
           <h6>Elegir foto...</h6>
           <input type="file" class="text-center center-block file-upload">
         </div><hr><br>
@@ -34,13 +33,13 @@
             </ul> --}}
 
             <div class="panel panel-default">
-              <div class="panel-heading">Social Media</div>
+              <div class="panel-heading text-center">Social Media</div>
               <div class="panel-body">
-              	<a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#"><i class="fab fa-github fa-2x"></i></a>
-                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-                <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>
-                <a href="#"><i class="fab fa-google-plus fa-2x"></i></a>
+                <center>
+              	<a href="#"><i class="fab fa-facebook fa-2x text-white"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x text-white ml-2"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x text-white ml-2"></i></a>
+                </center>
               </div>
             </div>
 
@@ -67,14 +66,14 @@
                                 {{-- <input type="text" class="form-control" name="last_name" placeholder="Segundo nombre"> --}}
                             </div>
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <div class="col-md-8">
-                               <label for="mobile"><h4>Celular:
-                                  <g>{{Auth::user()->number }}</g>
+                               <label for="mobile"><h4>Localidad:
+                                  <g>{{Auth::user()->pais}}</g>
                                </h4></label>
-                                {{-- <input type="text" class="form-control" name="celular" placeholder="1145364576"> --}}
+                                <input type="text" class="form-control" name="celular" placeholder="1145364576">
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <div class="col-md-8">
                               <label for="email"><h4>Email:

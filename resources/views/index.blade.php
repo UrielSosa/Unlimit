@@ -3,12 +3,12 @@
     <title>Bienvenido {{ Auth::user()->first_name}}</title>
 @endsection
 @section('contenido')
-{{-- {{dd($autos ?? '')}} --}}
+<div class="cajadefondo" id="bodybg">
   <div class="card-group ">
-      <div class="row d-flex justify-content-around">
+      <div class="row d-flex justify-content-around" id="productos">
         @foreach ($autos ?? '' as $auto)
-          <div class="card index col-12 col-md-3 p-0 m-2">
-          <img src="{{ Storage::url('img/productos/'. $auto->featured_img )}}" class="card-img-top" alt="...">
+          <div class="card col-12 col-md-3 p-0 m-2 prodcard">
+          <img src="{{ Storage::url('img/productos/'. $auto->featured_img )}}" class="card-img-top" alt="imagen">
             {{-- <img src="/img/productos/{{$auto->featured_img}}" class="card-img-top" alt="..."> --}}
             <div class="card-body">
               <div class="position-absolut">
@@ -22,5 +22,5 @@
   <div class="mx-auto" style="width: 200px;">
     {{ $autos->links()}}
   </div>
-
+</div>
 @endsection

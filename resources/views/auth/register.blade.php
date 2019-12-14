@@ -3,14 +3,15 @@
     <title>Registrarse</title>
 @endsection
 @section('contenido')
+</div>
   <section class="cajadelogin" id="@php
    $id=chr(rand(ord("w"), ord("z")));
    echo $id;
   @endphp" >
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card register mt-5">
+    <div class="row justify-content-center" id="divregister">
+        <div class="col-md-8 mb-2">
+            <div class="card register mt-3">
                 <div class="card-header m-0 text-center text-white">{{ __('Registrate') }}</div>
 
                 <div class="card-body">
@@ -171,8 +172,9 @@
 
 <style>
 #header{
-  height: 12vh;
+  height: 14vh;
 }
+
 </style>
 
 <script src="/js/register.js" charset="utf-8"></script>

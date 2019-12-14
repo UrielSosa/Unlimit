@@ -3,7 +3,7 @@
     <title>Iniciar Session</title>
 @endsection
 @section('contenido')
-
+</div>
   <section class="cajadelogin" id="@php
    $id=chr(rand(ord("a"), ord("g")));
    echo $id;
@@ -85,7 +85,7 @@
 
 <style>
 #header{
-  height: 12vh;
+  height: 14vh;
 }
 </style>
 

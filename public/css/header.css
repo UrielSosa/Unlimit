@@ -134,4 +134,7 @@
   --fieldBorderColorActive: blue;
 }
 
+#header{
+	max-height: 30vh;
+}
 /* Fin de la barra de navegacion */

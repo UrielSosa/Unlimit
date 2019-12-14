@@ -24,4 +24,5 @@
     <input type="file" name="foto" value="{{$producto->avatar}}">
     <input type="submit" name="enviar" value="Editar">
 </form>
+
 @endsection
