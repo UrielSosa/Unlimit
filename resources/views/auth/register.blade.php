@@ -100,16 +100,16 @@
                                 @enderror
                             </div> --}}
 
-                        <div class="form-group col-md-5">
+                        {{-- <div class="form-group col-md-5">
                           <div class="form-group">
                             <label for="pais">¿De donde eres?</label>
-                            <select id="pais" class="form-control" name="pais" required>
+                            <select id="pais" class="form-control" name="pais">
                             </select>
                             <br>
                             <div id="muncip">
                             </div>
                           </div>
-                        </div>
+                        </div> --}}
 
 
 

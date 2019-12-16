@@ -19,8 +19,8 @@ class CreateUsersTable extends Migration
           // $table->integer('number');
           // $table->string('sexo');
           // $table->date('fecha_nac');
-          $table->string('pais');
-          $table->string('municipios');
+          // $table->string('pais');
+          // $table->string('municipios');
           // $table->avatar('avatar');
           $table->rememberToken();
           $table->timestamps();

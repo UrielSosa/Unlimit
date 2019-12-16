@@ -27,8 +27,8 @@ class RegisterController extends Controller
             // 'number' => [ 'min:10', 'max:11'],
             // 'sexo' => [ 'string',],
             // 'fecha_nac' => ['string'],
-            'pais' => ['string'],
-            'municipios' => ['string'],
+            // 'pais' => ['string'],
+            // 'municipios' => ['string'],
             // 'avatar' =>['mimes:jpeg,bmp,png'],
         ]);
     }
@@ -44,8 +44,8 @@ class RegisterController extends Controller
             // 'number' => $data['number'],
             // 'sexo' => $data['sexo'],
             // 'fecha_nac' => $data['fecha_nac'],
-            'pais' => $data['pais'],
-            'municipios' => $data['municipios'],
+            // 'pais' => $data['pais'],
+            // 'municipios' => $data['municipios'],
             // 'avatar' => $data['avatar'],
         ]);
     }

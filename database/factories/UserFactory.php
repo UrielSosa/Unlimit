@@ -28,8 +28,8 @@ $factory->define(User::class, function (Faker $faker) {
         // 'number' => 123123,
         // 'sexo' => $faker->randomElement(['male', 'female']),
         // 'fecha_nac' => $faker->dateTime('2014-02-25 08:37:17'),
-        'pais' => $faker->city,
-        'municipios' => $faker->city,
+        // 'pais' => $faker->city,
+        // 'municipios' => $faker->city,
 
     ];
 });
