@@ -34,5 +34,4 @@ window.onload = function(){
 })
 
 
-  // cambiar_fondo(header)
 }

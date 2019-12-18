@@ -29,7 +29,7 @@
             </div>
           @endif
           @else
-            <div class="custom-control custom-switch mt-4 mr-2">
+            <div class="custom-control custom-switch mt-4 mr-2 ml-2">
               <input type="checkbox" class="custom-control-input" id="cambiarFondo">
               <i class="far fa-sun mr-5"></i>
               <label class="custom-control-label" for="cambiarFondo">
