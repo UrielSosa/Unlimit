@@ -4,6 +4,9 @@
 	padding: 0;
 	max-width: 100%;
 }
+a:hover{
+	color:#dddddd;
+}
 body{
 
 /* fondo 2 */
@@ -160,4 +163,31 @@ background-color: rgba(255, 255, 255, 0.7) !important;
 .centerbtn{
   position:absolute;
   position: relative; top: 50%; transform: translateY(0%) translateX(42%); width: 55%;
+}
+hr{
+	margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 2px solid rgba(0,0,0,.1);
+}
+
+.boton-gris{
+	color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+.boton-gris:hover{
+	color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.boton-celes{
+	color: #fff;
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+}
+.boton-celes:hover{
+	color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
 }

@@ -4,8 +4,8 @@
 @endsection
 @section('contenido')
   <center>
-<div class="list-group row mb-3 mt-3 card rounded-top" style="width: 18rem;">
-  <h3 class="text-center card-header text-body">Agregar un producto</h3>
+<div class="list-group row mb-3 mt-3 rounded-top card border-secondary text-secondary index" style="width: 50rem;">
+  <h3 class="text-center card-header text-body ">Agregar un producto</h3>
 
   <form class="" action="/agregarProducto" method="post" enctype="multipart/form-data">
     @csrf
@@ -34,10 +34,12 @@
       <label for="Foto" class="text-center">Foto</label> <br>
       <input type="file" name="featured_img" value="">
     </div>
+    <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
 
-    <div class="list-group-item col-md-10 mb-2">
+    <div class="list-group-item col-md-10 mb-4">
       <input class="btn btn-success" type="submit" name="enviar" value="Agregar">
     </div>
+
 
   </form>
 </div>

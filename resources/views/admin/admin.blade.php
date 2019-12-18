@@ -7,14 +7,15 @@
       <div class="col-4">
           <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                  <li class="breadcrumb-item active" aria-current="page"><a href="" class="">listado</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"><a href="" class="btn btn-info">listado</a></li>
               </ol>
               {{-- <ol class="breadcrumb">
                   <li class="breadcrumb-item active" aria-current="page"><a href="/agregarProducto" class="">Agregar</a></li>
               </ol> --}}
           </nav>
       </div>
-      <div class="col-8 text-white">
+      <div class="col-8 text-white mt-2
+      mb-2 ">
           <table class="table table-dark m-0">
               <thead>
                   <tr>
@@ -32,9 +33,9 @@
                             {{-- {{dd($con)}} --}}
                             <td class="text-center">{{$con->id}}</td>
                             <td class="pl-5">{{$con->name}}</td>
-                            <td class="text-center"><a href="/detalleProducto/{{$con->id}}"><ion-icon name="search"></ion-icon></a></td>
-                            <td class="text-center"><a href="/agregarProducto"><ion-icon name="brush"></ion-icon></a></td>
-                            <td class="text-center"><a href=""><ion-icon name="trash"></ion-icon></a></td>
+                            <td class="text-center"><a class="btn btn-info" href="/detalleProducto/{{$con->id}}"><ion-icon name="search"></ion-icon></a></td>
+                            <td class="text-center"><a class="btn btn-info" href="/agregarProducto"><ion-icon name="brush"></ion-icon></a></td>
+                            <td class="text-center"><a  href="" class="btn btn-info"><ion-icon name="trash"></ion-icon></a></td>
                             {{-- <td class="text-center"><a href=""><ion-icon name="add"></ion-icon></a></td> --}}
                           </tr>
                           @endforeach

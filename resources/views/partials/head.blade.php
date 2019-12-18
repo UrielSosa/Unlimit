@@ -19,4 +19,5 @@
     @yield('titulo')
   </head>
   <body>
-    <div class="cajadefondo" id="bodybg">
+    <div class="cajadefondo " id="bodybg">
+      <div class="prodcard">

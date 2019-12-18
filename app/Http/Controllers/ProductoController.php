@@ -43,7 +43,6 @@ class ProductoController extends Controller
 
         $ruta = $datos->file('featured_img')->store('public');
         $imagen = basename($ruta);
-
         $productoNuevo = new Producto();
         $productoNuevo->name = $datos['nombre'];
         $productoNuevo->price = $datos['precio'];
@@ -53,7 +52,7 @@ class ProductoController extends Controller
 
         $productoNuevo->save();
 
-        return redirect('/productos');
+        return redirect('/home');
 
     }
 
