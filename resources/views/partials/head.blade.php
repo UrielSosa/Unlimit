@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <script src="/js/themes.js" charset="utf-8"></script>
+    
+    <script src="/js/changeTheme.js" charset="utf-8"></script>
 
     {{-- link sin internet --}}
 

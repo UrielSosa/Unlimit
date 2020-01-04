@@ -8,7 +8,7 @@
           <nav aria-label="breadcrumb"> 
             @foreach ($categorias as $cate)
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="page"><a href="admin{{$cate->id}}" class="btn btn-info">{{$cate->name}}</a></li>
+                    <a href="admin{{$cate->id}}" class="breadcrumb-item active">{{$cate->name}}</a>
                 </ol>
               @endforeach
               {{-- <ol class="breadcrumb">

@@ -12,7 +12,7 @@
             <div class="card-body">
               <div class="position-absolut">
               <a href="/detalleProducto/{{$auto->id}}" class="btn btn-outline-success relative-bottom mr-1"> Ver detalle <i class="search fas fa-search-plus"></i></a>
-              <a href="/detalleProducto/{{$auto->id}}" class="btn btn-outline-success relative-bottom "> Añadir a Carrito <i class="carrito fas fa-cart-plus"></i></a>
+              <a href="/detalleProducto/{{$auto->id}}" class="btn btn-outline-success relative-bottom "> Add cart <i class="carrito fas fa-cart-plus"></i></a>
             </div>
           </div>
         </div>

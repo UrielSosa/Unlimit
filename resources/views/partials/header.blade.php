@@ -65,7 +65,7 @@
 
           <nav class="nav m-0">
             <div class="nav-item m-0">
-              <a href="index.php" class="nav-link active">
+              <a href="/home" class="nav-link active">
                 <h6>Inicio</h6>
                 <i class="fas fa-home"></i>
               </a>
@@ -86,11 +86,7 @@
           </div>
         </nav>
         @endguest
-
-
-
       </nav>
     </div>
-    <script src="/js/themes.js" charset="utf-8"></script>
 
   </header>
