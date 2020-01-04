@@ -20,15 +20,15 @@ window.onload = function (){
   let errorConCon = document.getElementById('errorConfPass');
 
   let regexEmail = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
-  // let regexContra = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
+  let regexContra = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
   let regexContra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
   let error = '';
   formulario.onsubmit = function (e) {
-    // for (var input of inputs) {
-    //   if(input.getAttribute('class') != 'form-control is-valid'){
-    //     e.preventDefault()
-    //   }
-    // }
+     for (var input of inputs) {
+       if(input.getAttribute('class') != 'form-control is-valid'){
+         e.preventDefault()
+       }
+     }
     if (error >= 1) {
      e.preventDefault()
     }

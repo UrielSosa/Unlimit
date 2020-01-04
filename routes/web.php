@@ -52,6 +52,7 @@ Route::get('/preguntas', 'HomeController@preguntas')->name('Preguntas');
 
 /*--------ADMIN--------*/
 Route::get('/admin','homeController@admin')->middleware('auth')->middleware('role');
+Route::get('/admin{id}','homeController@adminSearch')->middleware('auth')->middleware('role');
 // Route::get('/agregarProducto','ProductoController@create')->middleware('auth')->middleware('role'); /*returna la vista*/
 // Route::post('/agregarProducto','ProductoController@store')->middleware('auth')->middleware('role'); /*hace la logica del guardado*/
 Route::get('/editarProducto/{id}', 'ProductoController@editar')->middleware('auth')->middleware('role'); /*Envia al controlador el id para returnar la vista con los datos*/

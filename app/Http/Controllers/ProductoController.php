@@ -97,9 +97,7 @@ class ProductoController extends Controller
     }
 
 
-     public function search(Request $request)
-    {
-        //
+    public function search(Request $request){
         if($request->has('buscar')){
             $products = Producto::where('name','LIKE','%' . $request->get('buscar') . '%')->paginate(8);
         }else{

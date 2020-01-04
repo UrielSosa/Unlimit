@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Producto;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -30,6 +31,9 @@ class HomeController extends Controller
     }
     public function admin()
     {
-        return view('admin.admin')->with('contenido',Producto::paginate(12));
+        return view('admin.admin', ['contenido'=>Producto::paginate(12), 'categorias'=>Category::paginate(12)]);
+    }
+    public function adminSearch(Category $id){
+        return view('admin.admin', ['contenido'=>Producto::where('category_id','LIKE',$id->id)->paginate(8), 'categorias'=>Category::paginate(12)]);
     }
 }

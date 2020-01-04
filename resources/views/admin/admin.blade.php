@@ -1,14 +1,16 @@
 @extends('layouts.principal')
 @section('titulo')
-    <title>admin</title>
+    <title>Bienvenido administrador</title>
 @endsection
 @section('contenido')
   <div class="col-12 row text-white mt-2">
       <div class="col-4">
-          <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                  <li class="breadcrumb-item active" aria-current="page"><a href="" class="btn btn-info">listado</a></li>
-              </ol>
+          <nav aria-label="breadcrumb"> 
+            @foreach ($categorias as $cate)
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item active" aria-current="page"><a href="admin{{$cate->id}}" class="btn btn-info">{{$cate->name}}</a></li>
+                </ol>
+              @endforeach
               {{-- <ol class="breadcrumb">
                   <li class="breadcrumb-item active" aria-current="page"><a href="/agregarProducto" class="">Agregar</a></li>
               </ol> --}}
@@ -28,8 +30,8 @@
                   </tr>
               </thead>
               <tbody>
-                  @foreach ($contenido ?? '' as $con)
-                          <tr>
+                  @forelse ($contenido ?? '' as $con)
+                      <tr>
                             {{-- {{dd($con)}} --}}
                             <td class="text-center">{{$con->id}}</td>
                             <td class="pl-5">{{$con->name}}</td>
@@ -38,7 +40,9 @@
                             <td class="text-center"><a  href="" class="btn btn-info"><ion-icon name="trash"></ion-icon></a></td>
                             {{-- <td class="text-center"><a href=""><ion-icon name="add"></ion-icon></a></td> --}}
                           </tr>
-                          @endforeach
+                  @empty
+                        <div class="text-center bg-dark h4 p-2">Esta categoria no tiene ningun producto asociado</div>
+                  @endforelse
                       </tbody>
                   </table>
       </div>

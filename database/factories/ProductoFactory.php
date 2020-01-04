@@ -4,6 +4,7 @@
 
 use App\Producto;
 use App\User;
+use App\Category;
 use Faker\Generator as Faker;
 
 $factory->define(Producto::class, function (Faker $faker) {
@@ -13,6 +14,7 @@ $factory->define(Producto::class, function (Faker $faker) {
         'description' => $faker->paragraph(4),
         'price' => $faker->randomFloat(2, 100000, 10000000),
         'user_id' => User::all()->random()->id,
+        'category_id' => $faker->randomDigit,
         'featured_img' => $faker->image($path, 800, 600,'technics', false),
     ];
 });
