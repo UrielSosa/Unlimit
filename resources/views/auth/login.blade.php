@@ -65,7 +65,7 @@
                         <div class="d-flex justify-content-center">
                             {{-- <div class="col-md-8 offset-md-4"> --}}
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Iniciar Session') }}
+                                    {{ __('Iniciar Sesion') }}
                                 </button>
 
                                 @if (Route::has('password.request'))

@@ -21,7 +21,7 @@
       <nav class="nav m-0">
         @guest
           <div class="nav-item m-0">
-            <a class="nav-link active" href="{{ route('login') }}"><h6>{{ __('Iniciar Session') }}</h6><i class="fas fa-sign-in-alt"></i></a>
+            <a class="nav-link active" href="{{ route('login') }}"><h6>{{ __('Iniciar Sesion') }}</h6><i class="fas fa-sign-in-alt"></i></a>
           </div>
           @if (Route::has('register'))
             <div class="nav-item">
