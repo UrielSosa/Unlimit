@@ -8,7 +8,10 @@ window.onload = function (){
   let inputEmail = elementos[3];
   let inputContra = elementos[4];
   let inputConfirm = elementos[5];
-  let botonEnviar = elementos[7];
+  let inputTelefono = elementos[6];
+  let inputSexo = elementos[7];
+  let inputAvatar = elementos[8];
+  let botonEnviar = elementos[9];
 
   let selectProvincia = document.getElementById('pais')
   let divMunicipio = document.getElementById('muncip');
@@ -18,23 +21,22 @@ window.onload = function (){
   let errorEm = document.getElementById('errorEmail');
   let errorCon = document.getElementById('errorPass');
   let errorConCon = document.getElementById('errorConfPass');
+  let errorTel = document.getElementById('errorTel');
 
   let regexEmail = (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
   let regexContra = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}/;
-  let regexContra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+  // let regexContra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
   let error = '';
+
   formulario.onsubmit = function (e) {
      for (var input of inputs) {
        if(input.getAttribute('class') != 'form-control is-valid'){
          e.preventDefault()
        }
+       else{
+         formulario.submit();
+       }
      }
-    if (error >= 1) {
-     e.preventDefault()
-    }
-    else {
-      formulario.submit
-    }
   }
 
   inputNombre.onchange = function () {
@@ -44,9 +46,7 @@ window.onload = function (){
         let mensajeNomb = document.createTextNode('Nombre muy corto');
         errorNomb.appendChild(mensajeNomb);
       }
-      error++;
     } else {
-      error = 1;
       inputNombre.setAttribute('class', 'form-control is-valid');
     }
   }
@@ -58,9 +58,7 @@ window.onload = function (){
         let mensajeAp = document.createTextNode('Apellido muy corto');
         errorAp.appendChild(mensajeAp);
       }
-      error++;
     } else {
-      error = 1;
       inputApellido.setAttribute('class', 'form-control is-valid');
     }
   }
@@ -72,9 +70,7 @@ window.onload = function (){
         let mensajeEm = document.createTextNode('Email invalido');
         errorEm.appendChild(mensajeEm);
       }
-      error++;
     } else {
-      error = 1;
       inputEmail.setAttribute('class', 'form-control is-valid');
     }
 
@@ -87,19 +83,12 @@ window.onload = function (){
         let mensajeCon = document.createTextNode('Contraseña invalida');
         errorCon.appendChild(mensajeCon);
       }
-      error++;
     } else {
-      error = 1;
       inputContra.setAttribute('class', 'form-control is-valid');
     }
   }
   console.log(error);
 
-  if (error > 1) {
-    formulario.onsubmit = function(e){
-      e.preventDefault;
-    }
-  }else {
     inputConfirm.onchange = function() {
       if (inputContra.value != inputConfirm.value) {
         inputConfirm.setAttribute('class', 'form-control is-invalid');
@@ -107,13 +96,30 @@ window.onload = function (){
           let mensajeConCon = document.createTextNode('Contraseñas no coinciden');
           errorConCon.appendChild(mensajeConCon);
         }
-        error++;
       } else {
-        error--;
         inputConfirm.setAttribute('class', 'form-control is-valid');
       }
     }
-  }
+
+    inputTelefono.onchange = function() {
+      if (inputTelefono.lenght <= 10) {
+        inputConfirm.setAttribute('class', 'form-control is-invalid');
+        if (errorTel.textContent == '') {
+          let mensajeTel = document.createTextNode('Telefono invalido');
+          errorTel.appendChild(mensajeTel);
+        }
+      } else {
+        inputTelefono.setAttribute('class', 'form-control is-valid');
+      }
+    }
+
+    inputSexo.onchange = function() {
+        inputSexo.setAttribute('class', 'form-control is-valid');
+    }
+
+    inputAvatar.onchange = function() {
+        inputAvatar.setAttribute('class', 'form-control is-valid');
+    }
 
 
   // Armado de SELECT
@@ -171,7 +177,7 @@ window.onload = function (){
     provinciaSelecc()
     mostrarMunicipios(provinciaSeleccionada);
     var selecMun = document.getElementById('municipios');
-    selecMun.remove();
+    // selecMun.remove();
   })
 
 divMunicipio.setAttribute('class', 'form-group');

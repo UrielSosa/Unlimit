@@ -23,7 +23,7 @@ body{
 
 /* Register */
 .register{
-	background-color: rgba(246, 246, 246, 0.3);
+	background-color: rgba(0, 0, 0, 0.4);
 	border-radius: 10%;
 	margin: auto;
 	padding-top: 2%;

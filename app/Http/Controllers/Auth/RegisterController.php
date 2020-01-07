@@ -24,12 +24,12 @@ class RegisterController extends Controller
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            // 'number' => [ 'min:10', 'max:11'],
-            // 'sexo' => [ 'string',],
-            // 'fecha_nac' => ['string'],
-            // 'pais' => ['string'],
-            // 'municipios' => ['string'],
-            // 'avatar' =>['mimes:jpeg,bmp,png'],
+            'number' => [ 'min:10', 'max:11'],
+            'sexo' => [ 'string',],
+            'fecha_nac' => ['string'],
+            'pais' => ['stri-ng'],
+            'municipios' => ['string'],
+            'avatar' =>['mimes:jpeg,bmp,png'],
         ]);
     }
 
@@ -41,12 +41,12 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'rol' => 1,
-            // 'number' => $data['number'],
-            // 'sexo' => $data['sexo'],
-            // 'fecha_nac' => $data['fecha_nac'],
-            // 'pais' => $data['pais'],
-            // 'municipios' => $data['municipios'],
-            // 'avatar' => $data['avatar'],
+            'number' => $data['number'],
+            'sexo' => $data['sexo'],
+            'fecha_nac' => $data['fecha_nac'],
+            'pais' => $data['pais'],
+            'municipios' => $data['municipios'],
+            'avatar' => $data['avatar'],
         ]);
     }
 }
