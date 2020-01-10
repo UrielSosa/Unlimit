@@ -28,7 +28,7 @@ window.onload = function (){
   // let regexContra = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
   let error = '';
 
-  formulario.onsubmit = function (e) {
+  formulario.addEventListener('submit', function (e) {
      for (var input of inputs) {
        if(input.getAttribute('class') != 'form-control is-valid'){
          e.preventDefault()
@@ -37,7 +37,7 @@ window.onload = function (){
          formulario.submit();
        }
      }
-  }
+  });
 
   inputNombre.onchange = function () {
     if (inputNombre.value.length <= 1) {
@@ -77,7 +77,7 @@ window.onload = function (){
   }
 
   inputContra.onchange = function() {
-    if (regexContra.test(inputContra.value) == false) {
+    if (regexContra.test(inputContra.value) != false) {
       inputContra.setAttribute('class', 'form-control is-invalid');
       if (errorCon.textContent == '') {
         let mensajeCon = document.createTextNode('Contraseña invalida');
@@ -120,7 +120,6 @@ window.onload = function (){
     inputAvatar.onchange = function() {
         inputAvatar.setAttribute('class', 'form-control is-valid');
     }
-
 
   // Armado de SELECT
 

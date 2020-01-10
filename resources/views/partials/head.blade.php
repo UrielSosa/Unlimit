@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/css?family=Asap&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    
     <script src="/js/changeTheme.js" charset="utf-8"></script>
+    @yield('script')
+    {{--<script src="/js/master.js" charset="utf-8"></script>--}}
 
     {{-- link sin internet --}}
 

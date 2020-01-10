@@ -24,12 +24,11 @@ $factory->define(User::class, function (Faker $faker) {
         'email_verified_at' => now(),
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'remember_token' => Str::random(10),
-        'rol' => $faker->randomElement(['9', '2', '1']),
-        // 'number' => 123123,
-        // 'sexo' => $faker->randomElement(['male', 'female']),
-        // 'fecha_nac' => $faker->dateTime('2014-02-25 08:37:17'),
-        // 'pais' => $faker->city,
-        // 'municipios' => $faker->city,
-
+        'rol' => $faker->randomElement(['2', '1']),
+        'number' => 123123,
+        'sexo' => $faker->randomElement(['male', 'female']),
+        'fecha_nac' => $faker->dateTime('2014-02-25 08:37:17'),
+        'pais' => $faker->city,
+        'municipios' => $faker->city,
     ];
 });

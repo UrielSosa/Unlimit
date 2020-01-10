@@ -29,11 +29,4 @@ class HomeController extends Controller
     {
         return view('usuario/preguntas');
     }
-    public function admin()
-    {
-        return view('admin.admin', ['contenido'=>Producto::paginate(12), 'categorias'=>Category::paginate(12)]);
-    }
-    public function adminSearch(Category $id){
-        return view('admin.admin', ['contenido'=>Producto::where('category_id','LIKE',$id->id)->paginate(8), 'categorias'=>Category::paginate(12)]);
-    }
 }

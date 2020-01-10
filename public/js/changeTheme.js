@@ -1,5 +1,5 @@
 window.onload = () => {
-    
+    if ("http://localhost:8000/login" != document.URL && document.URL != "http://localhost:8000/register") {
     const change = document.getElementById("cambiarFondo");
     const body = document.getElementById("bodybg");
     const header = document.getElementById("header");
@@ -43,4 +43,5 @@ window.onload = () => {
             greyTheme.toggler();
         }
     })
+}
 }

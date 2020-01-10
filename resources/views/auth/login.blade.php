@@ -4,11 +4,8 @@
 @endsection
 @section('contenido')
 </div>
-  <section class="cajadelogin" id="@php
-   $id=chr(rand(ord("a"), ord("g")));
-   echo $id;
-  @endphp" >
-
+</div>
+  <section class="cajadelogin" id="{{chr(rand(ord("a"), ord("g")))}}">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 mt-5">
@@ -82,11 +79,5 @@
     </div>
 </div>
 </section>
-
-<style>
-#header{
-  height: 14vh;
-}
-</style>
 
 @endsection

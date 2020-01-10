@@ -5,7 +5,7 @@
 @section('contenido')
 <h3>Agregar un producto</h3>
 
-<form class="" action="/editarProducto" method="post" enctype="multipart/form-data">
+<form class="" action="/producto" enctype="multipart/form-data">
     @csrf
     @method('PUT');
     <ul>

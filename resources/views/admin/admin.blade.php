@@ -8,7 +8,7 @@
           <nav aria-label="breadcrumb"> 
             @foreach ($categorias as $cate)
                 <ol class="breadcrumb">
-                    <a href="admin{{$cate->id}}" class="breadcrumb-item active">{{$cate->name}}</a>
+                    <a href="/admin/{{$cate->id}}" class="breadcrumb-item active">{{$cate->name}}</a>
                 </ol>
               @endforeach
               {{-- <ol class="breadcrumb">
@@ -34,10 +34,17 @@
                       <tr>
                             {{-- {{dd($con)}} --}}
                             <td class="text-center">{{$con->id}}</td>
-                            <td class="pl-5">{{$con->name}}</td>
-                            <td class="text-center"><a class="btn btn-info" href="/detalleProducto/{{$con->id}}"><ion-icon name="search"></ion-icon></a></td>
-                            <td class="text-center"><a class="btn btn-info" href="/agregarProducto"><ion-icon name="brush"></ion-icon></a></td>
-                            <td class="text-center"><a  href="" class="btn btn-info"><ion-icon name="trash"></ion-icon></a></td>
+                            <td class="pl-5"><div class="pr-2 text-center">{{$con->name}}</div> <div class="text-center"><a href="/producto/{{$con->id}}"><img src="{{ Storage::url('img/productos/'. $con->featured_img )}}" width="80px" height="80px" alt="..."></a></div></td>
+                            <td class="text-center my-auto"><a class="btn btn-info" href="/producto/{{$con->id}}"><ion-icon name="search"></ion-icon></a></td>
+                            <td class="text-center"><a class="btn btn-info" href="/producto/edit/{{$con->id}}"><ion-icon name="brush"></ion-icon></a></td>
+                            <td class="text-center">
+                                <form action="/producto/delete" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <input type="hidden" name="product_id" value="{{$con->id}}">
+                                    <button class="btn btn-info" type="submit"><ion-icon name="trash"></ion-icon></button>
+                                </form>
+                            </td>
                             {{-- <td class="text-center"><a href=""><ion-icon name="add"></ion-icon></a></td> --}}
                           </tr>
                   @empty

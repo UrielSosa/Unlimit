@@ -12,12 +12,7 @@ class Carrito extends Model
     public $cantidadTotal = 0;
     public $precioTotal = 0;
 
-    public function __construct($carritoViejo){
-      if ($carritoViejo) {
-        $this->items = $carritoViejo->items;
-        $this->cantidadTotal = $carritoViejo->cantidadTotal;
-        $this->precioTotal = $carritoViejo->precioTotal;
-      }
+    public function __construct(){
     }
 
     public function agregarItem($item, $id){

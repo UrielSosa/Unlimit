@@ -3,13 +3,17 @@
       <a class="navbar-brand text-white ml-3"  href="{{ url('/') }}">
           {{ config('app.name', 'Laravel') }}
       </a>
+      @if(Auth::user())
       <nav class="nav ml-auto col-8">
         <ul class="nav d-flex col-12">
           <div class="page">
             <div class="page__demo">
               <label class="field a-field a-field_a1 page__field">
-                <input class="field__input a-field__input" placeholder="¿Que seas buscar?" required>
-                  <span class="a-field__label-wrap">
+                <form action="/buscar" id="search" method="post">
+                  @csrf
+                  <input class="field__input a-field__input" id="inputB" placeholder="¿Que deseas buscar?" name="buscado">
+                </form>
+                  <span class="a-field__label-wrap" id="buscar">
                     <span class="a-field__label">Buscador</span>
                   </span>
               </label>
@@ -17,7 +21,14 @@
           </div>
         </ul>
       </nav>
-
+      <script>
+        var inp = this.document.getElementById('inputB');
+        var buscar = this.document.getElementById('buscar');
+        inp.addEventListener('click', function(){
+          buscar.style.display = 'none';
+        })
+      </script>
+  @endif
       <nav class="nav m-0">
         @guest
           <div class="nav-item m-0">
@@ -48,13 +59,11 @@
                 <a class="dropdown-item" href="/perfil"> Perfil</a>
                 <hr>
                 @if(Auth::user()->rol === 9)
-                <a class="dropdown-item" href="/admin"> Listado de Admin</a>
-                {{-- <hr> --}}
-                {{-- <a class="dropdown-item" href="/productos"> Productos</a> --}}
-                <hr>
-                <a class="dropdown-item" href="/agregarProducto">Agregar Productos</a>
-                <hr>
-                @endif
+                  <a class="dropdown-item" href="/admin">Panel de admin</a>
+                  <hr>
+                  <a class="dropdown-item" href="/producto">Agregar producto</a>
+                  <hr>
+                  @endif
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Cerrar session') }}</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
@@ -65,7 +74,7 @@
 
           <nav class="nav m-0">
             <div class="nav-item m-0">
-              <a href="/home" class="nav-link active">
+              <a href="/" class="nav-link active">
                 <h6>Inicio</h6>
                 <i class="fas fa-home"></i>
               </a>

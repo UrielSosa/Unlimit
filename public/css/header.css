@@ -131,7 +131,7 @@
 }
 .field{
   --fieldBorderColor: #D1C4E9;
-  --fieldBorderColorActive: blue;
+  --fieldBorderColorActive: grey;
 }
 
 #header{

@@ -3,33 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Producto;
+use App\Category;
+use App\User;
 use Illuminate\Http\Request;
 
 class ProductoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $producs = Producto::paginate(12);
     }
 
-
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
-    public function listado()
-    {
-        $productos = Producto::all();
-        return view('productos', compact('productos'));
+    public function detalle(Producto $id){
+      return view('productos.detalle', ['producto'=> $id]);
     }
+
     public function agregar(Request $datos) {
       //validaciones de los datos del formulario de agregar productos
       $validaciones = [
@@ -41,70 +29,57 @@ class ProductoController extends Controller
       // $mensajes = [];
         $this->validate($datos, $validaciones);
 
-        $ruta = $datos->file('featured_img')->store('public');
+        $ruta = $datos->file('featured_img')->store('public/img/productos');
         $imagen = basename($ruta);
         $productoNuevo = new Producto();
         $productoNuevo->name = $datos['nombre'];
         $productoNuevo->price = $datos['precio'];
         $productoNuevo->description = $datos['descripcion'];
         $productoNuevo->user_id = $datos['user_id'];
+        $productoNuevo->category_id = 1;
         $productoNuevo->featured_img = $imagen;
 
         $productoNuevo->save();
 
-        return redirect('/home');
+        return redirect('/');
 
     }
 
-    public function detalle($id){
-      $producto = Producto::find($id);
-      return view('detalleProducto', compact('producto'));
+    public function editar(Producto $id){
+      return view('admin.editarProducto', ['producto'=> $id]);
     }
 
-    public function editar($id){
-      $producto = Producto::find($id);
-      return view('admin.editarProducto', compact('producto'));
-    }
-
-    public function actualizar(Request $datos){
+    public function actualizar(Request $request){
       $validaciones = [
         'id' => 'required',
         'nombre' => 'required|max:100',
         'precio' => 'required|integer',
         'descripcion' => 'max:150',
-        // 'foto' => 'required|file|image';
       ];
-      // $mensajes = [];
-        $this->validate($datos, $validaciones);
+        $this->validate($request, $validaciones);
 
-        $ruta = $datos->file('foto')->store('public');
+        $ruta = $request->file('foto')->store('public/img/productos');
         $imagen = basename($ruta);
 
-        $productoEditado = Producto::find($datos["id"]);
-        $productoEditado->name = $datos['nombre'];
-        $productoEditado->price = $datos['precio'];
-        $productoEditado->description = $datos['descripcion'];
+        $productoEditado = Producto::find($request["id"]);
+        $productoEditado->name = $request['nombre'];
+        $productoEditado->price = $request['precio'];
+        $productoEditado->description = $request['descripcion'];
         $productoEditado->avatar = $imagen;
 
-        $productoEditado->save();
+        $productoEditado->update();
 
-        return redirect('/productos');
+        return redirect('/');
     }
-
-
-    public function show(Producto $id){
-        return view('productos.detalle')->with('producto',$id);
-    }
-
 
     public function search(Request $request){
-        if($request->has('buscar')){
-            $products = Producto::where('name','LIKE','%' . $request->get('buscar') . '%')->paginate(8);
+        if($request->has('buscado')){
+            $products = Producto::where('name','LIKE','%' . $request->get('buscado') . '%')->paginate(8);
         }else{
             $producs = Producto::paginate(8);
         }
-        $products->appends($request->only('buscar'));
-        return view('index')->with('productos',$products);
+        $products->appends($request->only('buscado'));
+        return view('index')->with('autos',$products);
     }
 
     public function store(Request $request)
@@ -125,8 +100,10 @@ class ProductoController extends Controller
     }
 
 
-    public function destroy(Producto $producto)
+    public function destroy(Request $request)
     {
-        //
+        $producto= Producto::find($request->input('product_id'));
+        $producto->delete();
+        return redirect('/admin');
     }
 }

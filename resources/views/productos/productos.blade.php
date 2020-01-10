@@ -5,7 +5,7 @@
     <ul>
       @foreach ($productos as $producto)
         <li>{{$producto->name}}</li>
-        <p> <a href="/detalleProducto({{$producto->id}})"> Ver detalle</a> </p>
+        <p> <a href="/producto({{$producto->id}})"> Ver detalle</a> </p>
       @endforeach
     </ul>
 @endsection
