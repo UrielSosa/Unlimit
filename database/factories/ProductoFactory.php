@@ -8,7 +8,7 @@ use App\Category;
 use Faker\Generator as Faker;
 
 $factory->define(Producto::class, function (Faker $faker) {
-    $path = storage_path('app/public/img/productos');
+    //$path = storage_path('app/public/img/productos');
     return [
         'name' => $faker->sentence(3),
         'description' => $faker->paragraph(4),

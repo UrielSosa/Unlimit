@@ -5,16 +5,12 @@
 @section('contenido')
   <div class="col-12 row text-white mt-2">
       <div class="col-4">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb text-center ">
-                <a href=""><li class="breadcrumb-item active" id="usuarios">Administrar Usuarios</li></a>
-            </ol>
-            <ol class="breadcrumb text-center">
-                <a href=""><li class="breadcrumb-item active" id="categorias">Administrar Categorias</li></a>
-            </ol>
-            <ol class="breadcrumb text-center">
-                <a href=""><li class="breadcrumb-item active" id="productos">Administrar Productos</li></a>
-            </ol>
+          <nav aria-label="breadcrumb"> 
+            @foreach ($categorias as $cate)
+                <ol class="breadcrumb">
+                    <a href="/admin/{{$cate->id}}" class="breadcrumb-item active">{{$cate->name}}</a>
+                </ol>
+              @endforeach
               {{-- <ol class="breadcrumb">
                   <li class="breadcrumb-item active" aria-current="page"><a href="/agregarProducto" class="">Agregar</a></li>
               </ol> --}}
