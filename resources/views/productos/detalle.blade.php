@@ -25,10 +25,13 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
+          <p>{{$producto->name}}</p>
           <hr>
           <p style="max-width: 1740px;">{{$producto->description}}</p>
           <hr>
           <p class="card-text"> $ {{$producto->price}}</p>
+          <hr>
+          {{-- <td class="text-center"><a class="btn btn-info" href="/producto/edit/{{$producto->id}}"><ion-icon name="brush"></ion-icon></a></td> --}}
         </div>
       </div>
     </div>

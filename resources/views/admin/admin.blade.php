@@ -1,6 +1,6 @@
 @extends('layouts.principal')
 @section('titulo')
-    <title>Bienvenido administrador</title>
+    <title>Bienvenido administradoruno</title>
 @endsection
 @section('contenido')
   <div class="col-12 row text-white mt-2">

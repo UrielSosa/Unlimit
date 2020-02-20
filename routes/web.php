@@ -22,11 +22,11 @@ Route::get('/admin/{id}','AdminController@search')->middleware('auth')->middlewa
 //Route::get('/admin/usuarios','AdminController@usuarios')->middleware('auth')->middleware('role');
 
 /* -- Productos -- */
-Route::get('/producto', function(){ return view('admin.agregarProducto');})->middleware('auth')->middleware('role'); /*returna la vista*/
+// Route::get('/producto/agregar', function(){ return view('admin.agregarProducto');})->middleware('auth')->middleware('role'); /*returna la vista*/
 Route::get('/productos', 'ProductoController@index')->name('Preguntas');
-Route::post('/producto','ProductoController@agregar')->middleware('auth')->middleware('role'); /*hace la logica del guardado*/
+Route::post('/producto/agregar','ProductoController@agregar')->middleware('auth')->middleware('role'); /*hace la logica del guardado*/
 Route::get('/producto/edit/{id}', 'ProductoController@editar')->middleware('auth')->middleware('role');
-Route::put('/producto', 'ProductoController@actualizar')->middleware('auth')->middleware('role'); /*Envía los datos por put para actualizar al controlador*/
+Route::post('/producto', 'ProductoController@actualizar')->middleware('auth')->middleware('role'); /*Envía los datos por put para actualizar al controlador*/
 Route::delete('/producto/delete', 'ProductoController@destroy')->middleware('auth')->middleware('role'); 
 Route::get('/producto/{id}', 'ProductoController@detalle'); /*Envia al controlador el id para returnar la vista con los datos*/
 Route::post('/buscar','ProductoController@search');

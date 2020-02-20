@@ -29,12 +29,14 @@ class RegisterController extends Controller
             'fecha_nac' => ['string'],
             'pais' => ['stri-ng'],
             'municipios' => ['string'],
-            'avatar' =>['mimes:jpeg,bmp,png'],
         ]);
     }
 
     protected function create(array $data)
     {
+        $ruta = $data['avatar']->store('public/avatars');
+        $imagen = basename($ruta);
+
         return User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
@@ -46,7 +48,7 @@ class RegisterController extends Controller
             'fecha_nac' => $data['fecha_nac'],
             'pais' => $data['pais'],
             'municipios' => $data['municipios'],
-            'avatar' => $data['avatar'],
+            'avatar' => $imagen,
         ]);
     }
 }

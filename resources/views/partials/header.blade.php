@@ -1,7 +1,7 @@
 <header class="container-fluid u_bg-azul" id="header">
     <div class="navbar">
       <a class="navbar-brand text-white ml-3"  href="{{ url('/') }}">
-          {{ config('app.name', 'Laravel') }}
+         Unlimit
       </a>
       @if(Auth::user())
       <nav class="nav ml-auto col-8">
@@ -61,10 +61,10 @@
                 @if(Auth::user()->rol === 9)
                   <a class="dropdown-item" href="/admin">Panel de admin</a>
                   <hr>
-                  <a class="dropdown-item" href="/producto">Agregar producto</a>
+                  <a class="dropdown-item" href="/producto/agregar">Agregar producto</a>
                   <hr>
                   @endif
-                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Cerrar session') }}</a>
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Cerrar sesion') }}</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
                 </form>

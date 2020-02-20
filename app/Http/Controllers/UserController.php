@@ -65,12 +65,13 @@ class UserController extends Controller
         }
 
         if($request->file('avatar')){
-            $route = $request->file('avatar')->storePublicly('public/avatars');
+            $route = $request->file('avatar')->store('public/avatars');
             $namePoster = basename($route);
             $user->avatar = $namePoster;
         }
         $user->update();
         return redirect()->route('admin');
+
     }
 
     public function destroy($id)

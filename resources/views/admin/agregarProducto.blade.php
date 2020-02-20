@@ -7,7 +7,7 @@
 <div class="list-group row mb-3 mt-3 rounded-top card border-secondary text-secondary index" style="width: 50rem;">
   <h3 class="text-center card-header text-body ">Agregar un producto</h3>
 
-  <form class="" action="/producto" method="post" enctype="multipart/form-data">
+  <form class="" action="/producto/agregar" method="post" enctype="multipart/form-data">
     @csrf
     <ul>
       @foreach ($errors->all() as $error)

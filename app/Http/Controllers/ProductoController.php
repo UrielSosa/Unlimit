@@ -53,23 +53,24 @@ class ProductoController extends Controller
       $validaciones = [
         'id' => 'required',
         'nombre' => 'required|max:100',
-        'precio' => 'required|integer',
+        'precio' => 'required',
         'descripcion' => 'max:150',
       ];
         $this->validate($request, $validaciones);
 
-        $ruta = $request->file('foto')->store('public/img/productos');
+        $ruta = $request->file('featured_img')->store('public/img/productos');
         $imagen = basename($ruta);
 
         $productoEditado = Producto::find($request["id"]);
         $productoEditado->name = $request['nombre'];
         $productoEditado->price = $request['precio'];
         $productoEditado->description = $request['descripcion'];
-        $productoEditado->avatar = $imagen;
+        $productoEditado->featured_img = $imagen;
 
         $productoEditado->update();
 
         return redirect('/');
+
     }
 
     public function search(Request $request){

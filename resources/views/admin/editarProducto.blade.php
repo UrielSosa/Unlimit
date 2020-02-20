@@ -3,11 +3,10 @@
     <title>Editar Producto</title>
 @endsection
 @section('contenido')
-<h3>Agregar un producto</h3>
+<h3>Editar un producto</h3>
 
-<form class="" action="/producto" enctype="multipart/form-data">
+<form class="" action="/producto" enctype="multipart/form-data" method="POST">
     @csrf
-    @method('PUT');
     <ul>
       @foreach ($errors->all() as $error)
         <li>{{$error}}</li>
@@ -21,7 +20,7 @@
     <label for="Descripcion">Descripcion</label>
     <input type="text" name="descripcion" value="{{$producto->description}}">
     <label for="Foto">Foto</label>
-    <input type="file" name="foto" value="{{$producto->avatar}}">
+    <input type="file" name="featured_img" value="{{$producto->featured_img}}">
     <input type="submit" name="enviar" value="Editar">
 </form>
 
