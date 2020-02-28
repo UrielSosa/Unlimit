@@ -42,12 +42,6 @@
   background-image: url(../images/register/register4.jpg);
   background-size: 100% 100%;
 }
-
-
-.cajadefondo{
-  background: linear-gradient(to left, #abbaab, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
 .cajadelogin{
   /* background-color: rgb(110, 193, 201); */
   height: 86vh;

@@ -6,12 +6,15 @@
 .u_logo img{
 	width: 100%;
 }
-.u_bg-azul{
-	background: #283c86;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to bottom, #8a493d, #521a1f);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to bottom, #8a493d, #521a1f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+header{
+	background: #232F3E;  /* fallback for old browsers */
+	/* background: -webkit-linear-gradient(to bottom, #8a493d, #521a1f);  Chrome 10-25, Safari 5.1-6 */
+	/* background: linear-gradient(to bottom, #8a493d, #521a1f); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	/* background-color: #521a1f; */
+}
+/*titulo*/
+.title{
+  font-family: 'Trade Winds';
 }
 /* Botones */
 .active{
@@ -19,7 +22,7 @@
 	text-transform: uppercase;
 	font-size: 1.1rem;
 }
-.active: hover{
+.active:hover{
 	color: gray;
 }
 /* buscador */

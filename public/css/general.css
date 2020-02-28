@@ -8,17 +8,11 @@ a:hover{
 	color:#dddddd;
 }
 body{
-
-/* fondo 2 */
-/* background: #000428;  /* fallback for old browsers */
-/* background: -webkit-linear-gradient(to bottom, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-/* background: linear-gradient(to bottom, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-	background: #eead4c;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #abbaab, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #abbaab, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	 /* background-repeat: no-repeat; */
+/* fondo 1 */
+	background: #46ACCD;
+	/*background: -webkit-linear-gradient(to bottom, #46ACCD, #232F3E); /* Chrome 10-25, Safari 5.1-6 */
+	/*background: linear-gradient(to bottom, #46ACCD, #232F3E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	padding-bottom: 0px;
 }
 
 /* Register */
@@ -50,8 +44,16 @@ body{
 	color: white;
 	cursor: pointer;
 }
+.prodcard{
+	background-color: #232F3E;
+	color: white;
+}
 .card-header h3{
 	color: white;
+}
+.card-text{
+	height: 15vh;
+	overflow: hidden;
 }
 .social_icon{
 	position: absolute;
@@ -127,19 +129,20 @@ input:focus{
 .dropdown:hover .dropbtn {
   color: blue;
 }
-.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+}
 
 /* card index */
-.index{
-background-color: rgba(255, 255, 255, 0.7) !important;
-}
+/* .index{ */
+/* background-color: rgba(255, 255, 255, 0.7) !important; */
+/* } */
 .mio{
 	list-style: none;
 }
-
-.prodcard{
+/* .prodcard{
 	background-color: rgba(243, 153, 102, 0.3);
-}
+} */
 /* boton de carrito */
 .carrito{
 	font-size: 1.5rem;
@@ -155,7 +158,12 @@ background-color: rgba(255, 255, 255, 0.7) !important;
 .card img{
 	width: 100%;
 }
-
+.fa-cloud {
+	color: #46ACCD;
+}
+.fa-sun{
+	color: yellow;
+}
 .pagination li{
 	margin: 1px;
 	padding: 1px;

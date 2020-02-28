@@ -1,9 +1,9 @@
 <header class="container-fluid u_bg-azul" id="header">
     <div class="navbar">
-      <a class="navbar-brand text-white ml-3"  href="{{ url('/') }}">
+      <a class="navbar-brand text-white ml-3 title"  href="{{ url('/') }}">
          Unlimit
       </a>
-      @if(Auth::user())
+      @if (Auth::user())
       <nav class="nav ml-auto col-8">
         <ul class="nav d-flex col-12">
           <div class="page">
@@ -28,7 +28,7 @@
           buscar.style.display = 'none';
         })
       </script>
-  @endif
+      @endif
       <nav class="nav m-0">
         @guest
           <div class="nav-item m-0">
@@ -42,7 +42,7 @@
           @else
             <div class="custom-control custom-switch mt-4 mr-2 ml-2">
               <input type="checkbox" class="custom-control-input" id="cambiarFondo">
-              <i class="far fa-sun mr-5"></i>
+              <i class="fas fa-sun mr-5"></i>
               <label class="custom-control-label" for="cambiarFondo">
                 <i class="fas fa-cloud ml-1"></i>
               </label>

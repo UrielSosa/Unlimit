@@ -124,7 +124,7 @@
                         <div class="form-group col-md-5">
                           <div class="form-group">
                             <label for="avatar"> Ingresar foto </label>
-                            <input name="avatar" type="file" class="form-control" id="avatar" value="">
+                            <input name="avatar" type="file" class="form-control" id="avatar">
                           </div>
                           @error('avatar')
                             <span class="invalid-feedback" role="alert">

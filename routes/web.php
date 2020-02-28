@@ -10,9 +10,9 @@
 */
 
 /* -- Rutas principales -- */
+Route::get('/','HomeController@index')->name('home');
 Auth::routes();
-Route::get('/','homeController@index')->name('home');
-Route::get('/home','homeController@index')->name('home');
+Route::get('/home','HomeController@index')->name('home');
 Route::get('/preguntas', 'HomeController@preguntas')->name('Preguntas');
 
 /* -- Aministrador -- */
