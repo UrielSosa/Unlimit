@@ -52,8 +52,11 @@ body{
 	color: white;
 }
 .card-text{
-	height: 15vh;
+	height: 10vh;
+	padding-top: 10px;
 	overflow: hidden;
+	color: #919191;
+	font-size: 0.8rem;
 }
 .social_icon{
 	position: absolute;
@@ -140,9 +143,9 @@ input:focus{
 .mio{
 	list-style: none;
 }
-/* .prodcard{
-	background-color: rgba(243, 153, 102, 0.3);
-} */
+prodcard{
+	background-color: #EAEDED;
+} 
 /* boton de carrito */
 .carrito{
 	font-size: 1.5rem;
@@ -161,33 +164,33 @@ input:focus{
 .fa-cloud {
 	color: #46ACCD;
 }
-.fa-sun{
-	color: yellow;
+.fa-moon{
+	color: white;
 }
 .pagination li{
 	margin: 1px;
 	padding: 1px;
 }
 .centerbtn{
-  position:absolute;
-  position: relative; top: 50%; transform: translateY(0%) translateX(42%); width: 55%;
+  	position:absolute;
+  	position: relative; top: 50%; transform: translateY(0%) translateX(42%); width: 55%;
 }
 hr{
 	margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 2px solid rgba(0,0,0,.1);
+  	margin-bottom: 1rem;
+  	border: 0;
+  	border-top: 2px solid rgba(0,0,0,.1);
 }
 
 .boton-gris{
-	color: #fff;
+  color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
 }
 .boton-gris:hover{
 	color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  	background-color: #28a745;
+  	border-color: #28a745;
 }
 .boton-celes{
 	color: #fff;
@@ -196,6 +199,6 @@ hr{
 }
 .boton-celes:hover{
 	color: #fff;
-  background-color: #28a745;
-  border-color: #28a745;
+  	background-color: #28a745;
+  	border-color: #28a745;
 }

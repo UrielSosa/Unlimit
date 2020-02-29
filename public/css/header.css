@@ -30,7 +30,7 @@ header{
   width: 100%;
 }
 .field{
-  --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+  --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, white);
   width: 85%;
 }
 .field__input{

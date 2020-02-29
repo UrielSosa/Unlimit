@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('index')->with('autos',Producto::paginate(12));
+        return view('index')->with('productos',Producto::paginate(12));
     }
     public function carrito()
     {

@@ -6,6 +6,7 @@ window.onload = () => {
         const footer = document.getElementById("footer");
         const productos = document.getElementsByClassName("prodcard");
         const cloud = document.getElementsByClassName("fa-cloud");
+        const moon = document.getElementsByClassName("fa-moon");
     
     const normalTheme = {
         status: true,
@@ -16,6 +17,9 @@ window.onload = () => {
             for (producto of productos) {
                 producto.style.background = "#232F3E";
                 producto.style.color = "white";
+            }
+            for (luna of moon) {
+                luna.style.color = "white";
             }
             for (nube of cloud) {
                 nube.style.color = "#46ACCD";
@@ -33,8 +37,11 @@ window.onload = () => {
             for (nube of cloud) {
                 nube.style.color = "white";
             }
+            for (luna of moon) {
+                luna.style.color = "black";
+            }
             for (producto of productos) {
-                producto.style.background = "white";
+                producto.style.background = "#EAEDED";
                 producto.style.color = "black"
             }
             this.status = true;

@@ -42,7 +42,7 @@
           @else
             <div class="custom-control custom-switch mt-4 mr-2 ml-2">
               <input type="checkbox" class="custom-control-input" id="cambiarFondo">
-              <i class="fas fa-sun mr-5"></i>
+              <i class="fas fa-moon mr-5"></i>
               <label class="custom-control-label" for="cambiarFondo">
                 <i class="fas fa-cloud ml-1"></i>
               </label>

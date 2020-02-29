@@ -3,7 +3,7 @@
     <title>Agregar Producto</title>
 @endsection
 @section('contenido')
-  <center>
+<center>
 <div class="list-group row mb-3 mt-3 rounded-top card border-secondary text-secondary index" style="width: 50rem;">
   <h3 class="text-center card-header text-body ">Agregar un producto</h3>
 
@@ -15,7 +15,7 @@
       @endforeach
     </ul>
 
-    <div class="list-group-item active rounded-top col-md-10">
+    <div class="list-group-item rounded-top col-md-10">
       <label class="text-center" for="Nombre">Nombre</label><br>
       <input type="text" name="nombre" value="{{old('nombre')}}">
     </div>

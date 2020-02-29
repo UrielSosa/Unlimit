@@ -22,7 +22,7 @@ Route::get('/admin/{id}','AdminController@search')->middleware('auth')->middlewa
 //Route::get('/admin/usuarios','AdminController@usuarios')->middleware('auth')->middleware('role');
 
 /* -- Productos -- */
-// Route::get('/producto/agregar', function(){ return view('admin.agregarProducto');})->middleware('auth')->middleware('role'); /*returna la vista*/
+Route::get('/producto/agregar', function(){ return view('admin.agregarProducto');})->middleware('auth')->middleware('role'); /*returna la vista*/
 Route::get('/productos', 'ProductoController@index')->name('Preguntas');
 Route::post('/producto/agregar','ProductoController@agregar')->middleware('auth')->middleware('role'); /*hace la logica del guardado*/
 Route::get('/producto/edit/{id}', 'ProductoController@editar')->middleware('auth')->middleware('role');
