@@ -38,6 +38,7 @@
                       <tr>
                             {{-- {{dd($con)}} --}}
                             <td class="text-center">{{$con->id}}</td>
+                            {{--<td class="pl-5"><div class="pr-2 text-center">{{$con->name}}</div> <div class="text-center"><a href="/producto/{{$con->id}}"><img src="{{ Storage::url('img/productos/'. $con->featured_img )}}" width="80px" height="80px" alt="..."></a></div></td>--}}
                             <td class="pl-5"><div class="pr-2 text-center">{{$con->name}}</div> <div class="text-center"><a href="/producto/{{$con->id}}"><img src="{{ Storage::url('img/productos/'. $con->featured_img )}}" width="80px" height="80px" alt="..."></a></div></td>
                             <td class="text-center my-auto"><a class="btn btn-info" href="/producto/{{$con->id}}"><ion-icon name="search"></ion-icon></a></td>
                             <td class="text-center"><a class="btn btn-info" href="/producto/edit/{{$con->id}}"><ion-icon name="brush"></ion-icon></a></td>

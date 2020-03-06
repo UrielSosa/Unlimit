@@ -10,8 +10,8 @@
     <div class="card prodcard h-100">
       <h5 class="card-title m-0 p-0 pb-3 pt-3 text-center">{{$producto->name}}</h5>
       <div class="card-body">
-        {{-- <img src="{{ url('storage/img/productos/'.$producto->featured_img) }}" class="card-img-top" alt="imagen"> --}}
-        <img src="/images/home/erizo.jpg" class="card-img-top" alt="imagen">
+        <img src="{{ url('storage/img/productos/'.$producto->featured_img) }}" class="card-img-top" alt="imagen">
+        {{--<img src="/images/home/erizo.jpg" class="card-img-top" alt="imagen">--}}
         <h3 class="pt-1">$ {{ $producto->price}}</h3>
         <p class="card-text">{{$producto->description}}</p>
         <div class="row">

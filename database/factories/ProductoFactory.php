@@ -11,7 +11,7 @@ $factory->define(Producto::class, function (Faker $faker) {
     $path = storage_path('app/public/img/productos');
     return [
         'name' => $faker->sentence(3),
-        'description' => $faker->paragraph(4),
+        'description' => $faker->paragraph(2),
         'price' => $faker->randomFloat(2, 100000, 10000000),
         'user_id' => User::all()->random()->id,
         'category_id' => $faker->randomDigit,

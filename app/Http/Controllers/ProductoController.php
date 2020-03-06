@@ -28,7 +28,7 @@ class ProductoController extends Controller
       ];
       // $mensajes = [];
         $this->validate($datos, $validaciones);
-
+        
         $ruta = $datos->file('featured_img')->store('public/img/productos');
         $imagen = basename($ruta);
         $productoNuevo = new Producto();
@@ -57,8 +57,11 @@ class ProductoController extends Controller
         'descripcion' => 'max:150',
       ];
         $this->validate($request, $validaciones);
-
-        $ruta = $request->file('featured_img')->store('public/img/productos');
+        $usuario = User::find($request->user_id);
+        $ruta = $usuario->avatar;
+        if ($request->file('featured_img')) {
+          $ruta = $request->file('featured_img')->store('public/img/productos');
+        }
         $imagen = basename($ruta);
 
         $productoEditado = Producto::find($request["id"]);
@@ -80,7 +83,7 @@ class ProductoController extends Controller
             $producs = Producto::paginate(8);
         }
         $products->appends($request->only('buscado'));
-        return view('index')->with('autos',$products);
+        return view('index')->with('productos',$products);
     }
 
     public function store(Request $request)

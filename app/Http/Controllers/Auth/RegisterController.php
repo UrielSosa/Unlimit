@@ -36,7 +36,7 @@ class RegisterController extends Controller
     {
         $avatar = "";
         if($data['avatar']){
-            $archivo = $data['avatar'];
+            $archivo = $data['avatar']->store('public/img/avatars');
             $avatar= basename($archivo);
         }
         return User::create([

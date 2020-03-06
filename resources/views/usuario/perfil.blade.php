@@ -10,7 +10,7 @@
       <div class="row">
     		<div class="col-sm-3">
         <div class="text-center" >
-          <img src="{{ url('storage/avatars/'.Auth::user()->avatar ) }}" class="avatar img-circle img-thumbnail" alt="avatar" style="min-width: 220px; min-height: 200px;">
+          <img src="{{ url('public/storage/img/avatars/'.Auth::user()->avatar ) }}" class="avatar img-circle img-thumbnail" alt="avatar" style="min-width: 220px; min-height: 200px;">
           <h6>Elegir foto...</h6>
           <input type="file" class="text-center center-block file-upload">
         </div>
