@@ -6,6 +6,7 @@
     <title>Registrarse</title>
 @endsection
 @section('contenido')
+{{$errors}}
 </div>
 </div>
   <section class="cajadeRegister" id="{{chr(rand(ord("a"), ord("g")))}}">

@@ -24,16 +24,18 @@ class RegisterController extends Controller
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'number' => [ 'min:10', 'max:11'],
+            //'number' => [ 'min:10', 'max:11'],
             'sexo' => [ 'string',],
             'fecha_nac' => ['string'],
             'pais' => ['stri-ng'],
             'municipios' => ['string'],
+            //'avatar' => ['file'],
         ]);
     }
 
     protected function create(array $data)
     {
+        //dd($data);
         $avatar = "";
         if($data['avatar']){
             $archivo = $data['avatar']->store('public/img/avatars');
